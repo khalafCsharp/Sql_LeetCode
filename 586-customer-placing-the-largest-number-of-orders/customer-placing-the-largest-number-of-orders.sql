@@ -7,6 +7,6 @@
     Group By customer_number
     )
 
-    Select customer_number
+    Select Top 1 customer_number
     From Group_cte
     Where NumberOfOrders = (Select Max(NumberOfOrders) From Group_cte)
